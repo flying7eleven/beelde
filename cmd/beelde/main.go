@@ -1,16 +1,13 @@
 package main
 
 import (
+	"beelde/internal/pkg/collections"
+	"beelde/internal/pkg/health"
 	"beelde/internal/pkg/utils"
 	"github.com/gin-gonic/gin"
 	cors "github.com/rs/cors/wrapper/gin"
 	"github.com/sirupsen/logrus"
-	"net/http"
 )
-
-func HealthStatus(context *gin.Context) {
-	context.Status(http.StatusNoContent)
-}
 
 func createRouter(log *logrus.Logger) *gin.Engine {
 	router := gin.New()
@@ -19,7 +16,8 @@ func createRouter(log *logrus.Logger) *gin.Engine {
 
 	v1 := router.Group("/v1")
 	{
-		v1.GET("/health", HealthStatus)
+		v1.GET("/health", health.HealthStatus)
+		v1.GET("/collections", collections.GetKnownCollections)
 	}
 
 	return router

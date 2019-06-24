@@ -20,18 +20,6 @@
   version = "v1.3.1"
 
 [[projects]]
-  name = "github.com/jinzhu/gorm"
-  packages = ["."]
-  revision = "01b66011427614f01e84a473b0303c917179f2a0"
-  version = "v1.9.9"
-
-[[projects]]
-  name = "github.com/jinzhu/inflection"
-  packages = ["."]
-  revision = "f5c5f50e6090ae76a29240b61ae2a90dd810112e"
-  version = "v1.0.0"
-
-[[projects]]
   name = "github.com/json-iterator/go"
   packages = ["."]
   revision = "0ff49de124c6f76f8494e194af75bde0f1a49a29"
@@ -63,7 +51,7 @@
 
 [[projects]]
   name = "github.com/rs/cors"
-  packages = ["."]
+  packages = [".","wrapper/gin"]
   revision = "9a47f48565a795472d43519dd49aac781f3034fb"
   version = "v1.6.0"
 
@@ -100,6 +88,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e83d5419c445c801bd67f15e86a84207bdd5ae7bdf8e0ce6b6c3e8fbd50dc031"
+  inputs-digest = "307f6c4427c1f9756b274c31e23d799d040562b7149acad7bff6038e8b2be2b1"
   solver-name = "gps-cdcl"
   solver-version = 1
